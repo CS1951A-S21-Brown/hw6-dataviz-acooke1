@@ -9,4 +9,9 @@
     text-align: center;
 }
 
+.my-graph {
+    display: flex;
+    justify-content: center;
+}
+
 /* Include any custom CSS styling here! */

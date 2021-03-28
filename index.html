@@ -15,7 +15,25 @@
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
         <div class="col-lg-6">
-            <div id="graph1"></div>
+            <hr>
+            <h3>Top Video Games by Year</h3>
+            <form oninput='setData_1(yr.value)'>
+                <label for="yr">Enter a year:</label>
+                <input type="text" name="yr" id="yr" value='' onkeypress="if (event.keyCode == 13) {return false;}"><br>
+            </form>
+            <div id="graph1" class="my-graph"></div>
+            <hr>
+            <h3>Top Video Game Genres by Region</h3>
+            <form oninput='setData_2(regions.value)'>
+                <label for="regions">Choose a region:</label>
+                <select id="regions" name="regions">
+                    <option value="NA_Sales">North America</option>
+                    <option value="EU_Sales">Europe</option>
+                    <option value="JP_Sales">Japan</option>
+                    <option value="Other_Sales">Other</option>
+                    <option value="Global_Sales" selected>Global</option>
+                </select><br>
+            </form>
             <div id="graph2"></div><br/>
         </div>
         <div class="col-lg-6">
@@ -24,5 +42,7 @@
     </div>
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="graph_1.js"></script>
+    <script type="text/javascript" src="graph_2.js"></script>
 </body>
 </html>
