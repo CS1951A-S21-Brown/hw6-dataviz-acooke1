@@ -15,34 +15,88 @@
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
         <div class="col-lg-6">
-            <hr>
-            <h3>Top Video Games by Year</h3>
-            <form oninput='setData_1(yr.value)'>
-                <label for="yr">Enter a year:</label>
-                <input type="text" name="yr" id="yr" value='' onkeypress="if (event.keyCode == 13) {return false;}"><br>
-            </form>
-            <div id="graph1" class="my-graph"></div>
-            <hr>
-            <h3>Top Video Game Genres by Region</h3>
-            <form oninput='setData_2(regions.value)'>
-                <label for="regions">Choose a region:</label>
-                <select id="regions" name="regions">
-                    <option value="NA_Sales">North America</option>
-                    <option value="EU_Sales">Europe</option>
-                    <option value="JP_Sales">Japan</option>
-                    <option value="Other_Sales">Other</option>
-                    <option value="Global_Sales" selected>Global</option>
-                </select><br>
-            </form>
-            <div id="graph2"></div><br/>
+            <div>
+                <h3>Top Video Games by Year</h3>
+                <form oninput='setData_1(yr.value)'>
+                    <label for="yr">Enter a year:</label>
+                    <input type="text" name="yr" id="yr" value='' onkeypress="if (event.keyCode == 13) {return false;}"><br>
+                </form>
+                <div id="graph1" class="my-graph"></div>
+            </div>
+            <div>
+                <h3>Top Video Game Genres by Region</h3>
+                <form oninput='setData_2(regions.value)'>
+                    <label for="regions">Choose a region:</label>
+                    <select id="regions" name="regions">
+                        <option value="NA_Sales">North America</option>
+                        <option value="EU_Sales">Europe</option>
+                        <option value="JP_Sales">Japan</option>
+                        <option value="Other_Sales">Other</option>
+                        <option value="Global_Sales" selected>Global</option>
+                    </select><br>
+                </form>
+                <div id="graph2" class="my-graph"></div>
+            </div>
         </div>
         <div class="col-lg-6">
-            <div id="graph3"></div>
+            <div>
+                <h3>Top Video Game Publishers by Genre</h3>
+                <form oninput='setData_3(genre.value)'>
+                    <label for="genre">Choose a genre:</label>
+                    <select id="genre" name="genre">
+                        <option value="Role-Playing">Role-Playing</option>
+                        <option value="Action" selected>Action</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Platform">Platform</option>
+                        <option value="Misc">Misc</option>
+                        <option value="Fighting">Fighting</option>
+                        <option value="Simulation">Simulation</option>
+                        <option value="Puzzle">Puzzle</option>
+                        <option value="Racing">Racing</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Strategy">Strategy</option>
+                        <option value="Shooter">Shooter</option>
+                    </select><br>
+                </form>
+                <div id="graph3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="paragraph">
+            <p>
+                WRITTEN QUESTIONS:<br>
+                1. My first graph shows the top 10 games by Global Sales base on the entered year. If no valid year is entered, 
+                the dataset uses data over all time. In my pie chart, it is easy to see the top genres based on each region. You 
+                can use the dropdown menu to select a specific region and the pie chart will show you the rankings of the genre 
+                in that region. Hover over a section to see the percentage. My third graph is also very simple. It shows the top 
+                publishers based on a given genre. Similar to my first bar chart, just select a genre from the drop down menu and 
+                the chart will adjust accordingly to show rankings of publishers by global sales in that genre. <br>
+                2. <br>
+                    - d3 makes it easy to style the graphs and create transitions between different data<br>
+                    - d3 makes it easy to use different types of graphs since we are able to use many built in functions<br>
+                    - It was easy to have d3 interact with the front end<br>
+                3. <br>
+                    - Though d3 has plenty of options, it mainly covers graphs and using other visuals may have been useful<br>
+                    - d3 may not be suited for all different browsers and might have some accessibility issues<br>
+                    - d3 may not allow for data to be easily concealed<br>
+                4. I think that my color scheme could have been improved. The readings talk a lot about accessibility for 
+                users with vision impairments. My color scheme was not something which I had anticipated, and using more 
+                contrasting colors would have been good. Other ways to accomodate for these accessibility features could have 
+                involved the addition of audio cues. Adding a field to change text size could have also been useful. In order 
+                to make my dashboard more accessibile, I would first try to learn more in depth how to use d3 and the styling
+                functions. Then I would use this knowledge in order to add the features which I discuessed above as well as any
+                others which I discover along the way.<br>
+                5. Part of this was due to my lack of awareness before starting. I should have been more thourough in the readings 
+                and the learning of d3. There are also other features or apps which I am sure could have helped improve accessibility,
+                such as adding sound or helping locate accessibility issues which I could have researched on my own time.<br>
+            </p>
         </div>
     </div>
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="graph_1.js"></script>
     <script type="text/javascript" src="graph_2.js"></script>
+    <script type="text/javascript" src="graph_3.js"></script>
 </body>
 </html>

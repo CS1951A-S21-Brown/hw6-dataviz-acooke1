@@ -9,6 +9,28 @@
     text-align: center;
 }
 
+.row {
+    display: block;
+}
+
+.paragraph {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: .5rem;
+    background: #FFFFFF;
+    color: #313639;
+    border: 1px solid #313639;
+    border-radius: 8px;
+    pointer-events: none;
+    font-size: 1.3rem;
+}
+
 .my-graph {
     display: flex;
     justify-content: center;
